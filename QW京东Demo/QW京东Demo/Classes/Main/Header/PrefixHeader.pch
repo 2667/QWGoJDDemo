@@ -1,0 +1,65 @@
+//
+//  PrefixHeader.pch
+//  QW京东Demo
+//
+//  Created by mac on 16/1/14.
+//  Copyright © 2016年 mac. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "UIView+Extension.h"
+#import "UIImage+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+
+
+#define QWVersionKey @"AppVersion"
+
+
+#import "NSObject+JSON.h"
+// 第三方
+#import "MJExtension.h"
+
+
+
+//app主窗口
+#define QWKeyWindow [UIApplication sharedApplication].keyWindow
+// 主屏幕大小
+#define QWMainScreenBounds [UIScreen mainScreen].bounds
+//基本URL
+#define QWApiBaseURL        @"https://api.jd.com/routerjson"
+// appKey
+#define QWClient_id         @"19DA9E5EF9C12C94F2EE8E31134D475B"
+
+#define QWClient_secret     @"709cb278ce3e41aea3dd8e8de0bbb6cc"
+#define QWRedirect_uri      @"http://www.baidu.com"
+
+
+// 通知
+#define QWPageNumberDidChangeNotification               @"QWPageNumberDidChange"
+#define QWCurrentPageDidChangeNotification              @"QWCurrentPageDidChange"
+#define QWSelectedProductCountDidChangeNotification     @"QWSelectedProductCountDidChange"
+#define QWProductInfoDidRecievedNotification            @"QWProductInfoDidRecieved"
+#define QWProductBuyCountDidChangeNotification          @"QWProductBuyCountDidChange"
+////// 偏好设置
+#define QWUserDefault [NSUserDefaults standardUserDefaults]
+////
+#define QW_YES_string  @"YES"
+#define QW_NO_string   @"NO"
+//
+//// ...表示宏定义的可变参数
+//// __VA_ARGS__:表示函数里的可变参数
+#ifdef DEBUG // 处于开发阶段
+#define QWLog(...) NSLog(__VA_ARGS__)
+#else // 处于发布阶段
+#define QWLog(...)
+#endif
+
+#define QWKeyWindow [UIApplication sharedApplication].keyWindow
+
+
+ 
+
+#endif /* PrefixHeader_pch */
